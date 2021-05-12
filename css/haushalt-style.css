@@ -6,7 +6,9 @@
 .titel{
 	background-color:darkorchid;
 	height:100%;
-
+	text-align: center;
+	font-size: 5vh;
+	line-height: 10vh;
 }
 
 .nav{
@@ -29,4 +31,44 @@
 
 .container-fluid{
 	height: 100vh;
+}
+
+#filterButton{
+	font-size: 2.5vh;
+	line-height: 5vh;
+}
+
+.ampel{
+	display:inline-block;
+	height: 1em;
+	width:1em;
+	border-radius:50%;
+}
+
+.rot{
+	background-color:red;
+}
+
+.gelb{
+	background-color:yellow;
+}
+
+.gruen{
+	background-color:green;
+}
+
+.tabellenZeile{
+	vertical-align: middle;
+}
+
+.tabellenDiv{
+	height:90%; 
+	overflow:auto;
+}
+
+.tabellenDiv thead th{
+	position:sticky;
+	top:0;
+	z-index:1;
+	background-color:blue;
 }

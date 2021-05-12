@@ -1,32 +1,29 @@
-.header{
-	background-color:aqua;
-	height:10%;
+.header {
+	background-color: aqua;
+	height: 10%;
 }
 
-.titel{
-	background-color:darkorchid;
-	height:100%;
-
+.titel {
+	background-color: darkorchid;
+	height: 100%;
+	text-align: center;
 }
 
-.nav{
-	background-color:black;
-	height:100%;
-
+.nav {
+	background-color: black;
+	height: 100%;
 }
 
-.main{
-	background-color:blue;
-	height:80%;
-
+.main {
+	background-color: blue;
+	height: 80%;
 }
 
-.footer{
-	background-color:chocolate;
-	height:10%;
-
+.footer {
+	background-color: chocolate;
+	height: 10%;
 }
 
-.container-fluid{
+.container-fluid {
 	height: 100vh;
 }

@@ -26,7 +26,7 @@
 			height: 15%;
 		}
 
-		#hinzufÃ¼gen {
+		#hinzufügen {
 			/* 	padding-top: 5%; */
 			vertical-align: middle;
 			text-align: center;
@@ -83,8 +83,8 @@
 				</div>
 			</div>
 			<div id="Reihe2" class="row justify-content-around">
-				<div class="col-12" id="hinzufÃ¼gen">
-					<button>HinzufÃ¼gen</button>
+				<div class="col-12" id="hinzufügen">
+					<button>Hinzufügen</button>
 				</div>
 			</div>
 			<div id="Reihe3" class="row justify-content-around">
@@ -100,7 +100,16 @@
 		</div>
 	</main>
 
-	<footer class="row footer" id="footer"> </footer>
+	<footer class="row footer" id="footer">
+		<div class="row justify-content-center buttonFooterRow">
+
+			<button type="button" class="btn btn-primary col-5" id="zurueckButton"
+				onclick="window.location.href = 'javascript:history.back()'">Zurueck</button>
+			<button type="button" class="btn btn-primary col-5" id="homeButton"
+				onclick="window.location.href = 'startseite.html'">Home</button>
+		</div>
+	</footer>
+
 
 
 </body>

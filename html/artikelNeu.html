@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<title>
+		artikelNeu
+	</title>
+	<script src='jquery-3.6.0.js'></script>
+</head>
+
+<body class="container-fluid">
+	<header class="container-fluid">
+		<h1 class="row">
+			<a class"col-6" href="index.html">Web By Step - Beispielblog</a>
+		</h1>
+		<div class="row">
+			<p class="col-4">Navigation</p>
+		</div>
+	</header>
+	<div class="row">
+		<main class="col-sm-12 col-md-8" id="mainArtikel">
+			<h1>Neuer Artikel</h1>
+
+			<form action="index.html" method="post">
+
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Überschrift</span>
+					</div>
+					<input class="form-control" id="ueberschrift" name="ueberschrift" type="text">
+				</div>
+
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Autor</span>
+					</div>
+					<input class="form-control" id="autor" name="autor" type="text">
+				</div>
+
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Datum</span>
+					</div>
+					<input class="form-control" id="datum" name="datum" type="date">
+				</div>
+
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Anrisstext</span>
+					</div>
+					<textarea class="form-control" id="anriss" name="anriss" cols="60" rows="4"></textarea>
+				</div>
+
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Artikeltext</span>
+					</div>
+					<textarea class="form-control" id="text" name="text" cols="60" rows="8"></textarea>
+				</div>
+
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Tags (kommagetrennt)</span>
+					</div>
+					<input class="form-control" id="tags" name="tags" type="text">
+				</div>
+
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Bild</span>
+					</div>
+					<input class="form-control" id="bild" name="bild" type="file">
+				</div>
+
+				<button type="submit" class="btn btn-primary" onclick="datenAuslesen()">Veröffentlichen</button>
+			</form>
+
+
+			<!--
+			<h1>Neuer Artikel</h1>
+			<form action="index.html" method="POST">
+				<label for="ueberschrift"> Ueberschrift
+					<input id="ueberschrift" name="ueberschrift">
+				</label>
+				<p></p>
+				<label for="autor"> Autor
+					<input id="autor" name="autor">
+				</label>
+				<p></p>
+				<label for="anrisstext"> Anrisstext
+					<input id="anrisstext" name="anrisstext">
+				</label>
+				<p></p>
+				<label for="artikeltext"> Artikeltext
+					<input id="artikeltext" name="artikeltext">
+				</label>
+				<p></p>
+				<label for="tags"> Tags (kommagetrennt)
+					<input id="tags" name="tags">
+				</label>
+				<p></p>
+				<p></p>
+				<label for="bild"> Bild
+					<input type="button" id="bild" value="Datei auswaehlen " name="bild">
+				</label>
+				<p></p>
+				<button name="veroeffentlichen">Veroeffentlichen</button>
+			</form>-->
+		</main>
+		<div class="col-sm-12 col-md-4" id="side">
+		</div>
+	</div>
+	<footer class="container-fluid">
+		<hr>
+		<div class="row">
+			<a href="impressum.html">Impressum</a> | Copyright | <a href="kontakt.html"> Kontakt</a>
+		</div>
+	</footer>
+
+
+
+</body>
+
+<script src="data.js"></script>
+<script src="blog.js"></script>
+<script>
+	$(document).ready(function ladeSeite() {
+		$('#side').append(createSidebar());
+		eventsHinzufuegen();
+		let queryParameter = new URL(location.href).searchParams;
+		let artikelID = queryParameter.get('articleid');
+		console.log(artikelID);
+		$('#ueberschrift').val(articles[artikelID].ueberschrift);
+		$('#datum').val(articles[artikelID].erscheinungsDatum);
+		$('#autor').val(articles[artikelID].autor);
+		$('#anriss').val(articles[artikelID].teaser);
+		$('#text').val(articles[artikelID].text);
+		$('#tags').val(articles[artikelID].tags.join(','));
+		//document.getElementById("ueberschrift").value = articles[0].ueberschrift;
+		//document.getElementById("datum").value = articles[0].erscheinungsDatum;
+		//document.getElementById("autor").value = articles[0].autor;
+		//document.getElementById("anriss").value = articles[0].teaser;
+		//document.getElementById("text").value = articles[0].text;
+		//document.getElementById("tags").value = articles[0].tags.join(',');
+	});
+
+</script>
+
+</html>

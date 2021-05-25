@@ -31,7 +31,8 @@
 	<main class="row main" id="main">
 		<div class="col" style="height:100%; padding:5%">
 			<div class="row justify-content-around" style="height:33.3%">
-				<a href="einkaufslisteErstellen.html" class="col-5 align-self-center btn btn-primary" style="height:90%">
+				<a href="einkaufslisteErstellen.html" class="col-5 align-self-center btn btn-primary"
+					style="height:90%">
 					<img src="" alt="Einkaufsliste" width="100%" height="100%" style="vertical-align:middle">
 				</a>
 				<a href="meinBestand.html" class="col-5 align-self-center btn btn-primary" style="height:90%">
@@ -58,7 +59,14 @@
 	</main>
 
 	<footer class="row footer" id="footer">
+		<div class="row justify-content-center buttonFooterRow">
+			<button type="button" class="btn btn-primary col-5" id="zurueckButton"
+				onclick="window.location.href = 'javascript:history.back()'">Zurueck</button>
+			<button type="button" class="btn btn-primary col-5" id="homeButton"
+				onclick="window.location.href = 'startseite.html'">Home</button>
+		</div>
 	</footer>
+
 
 
 </body>

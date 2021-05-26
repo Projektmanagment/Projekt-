@@ -8,6 +8,10 @@ body{
 	padding: 10px;
 }
 
+#navigation{
+	height:100%;
+}
+
 .titel{
 	background-color:white;
 	height:100%;
@@ -15,13 +19,6 @@ body{
 	font-size: 5vh;
 	line-height: 10vh;
 }
-
-.nav{
-	
-	background-color: lightblue;
-	border-radius: 100%;
-}
-
 
 .main{
 	background-color:white;
@@ -83,7 +80,7 @@ body{
 
 .unsereButtons.normalButton{
 	background-color: lightgray;
-	border: 2px solid black
+	border: 2px solid black;
 }	
 
 #zurueckButton{
@@ -94,4 +91,19 @@ background-color: rgb(39, 107, 233);
 	background-color: rgb(39, 107, 233);
 }
 
+.icon{
+	height:70%; 
+	font-size:11vh; 
+	color:black; 
+	line-height: 15vh;
+}
 
+.iconText{
+	font-size:2.5vh; 
+	color:black;
+}
+
+.iconHolder{
+	height: 100%;
+	padding: 1vh;
+}

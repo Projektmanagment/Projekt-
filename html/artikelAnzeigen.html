@@ -27,7 +27,7 @@
 			height: 15%;
 		}
 
-		#hinzufÃ¼gen {
+		#hinzufügen {
 			/* 	padding-top: 5%; */
 			vertical-align: middle;
 			text-align: center;
@@ -66,7 +66,8 @@
 		<div class="col titel" id="titel">Artikelanzeige
 		</div>
 
-		<a href="optionen.html" class="col-2 btn btn-primary unsereButtons normalButton" id="navigation" style="border:none; background-color:initial">
+		<a href="optionen.html" class="col-2 btn btn-primary unsereButtons normalButton" id="navigation"
+			style="border:none; background-color:initial">
 			<div class="iconHolder">
 				<i class="fas fa-cog" style="font-size:5vh; color:black;"></i>
 			</div>
@@ -79,13 +80,60 @@
 			<div id="Reihe1" class="row justify-content-around">
 				<div class="col-12" id="artikelinfo">
 					<div class="row" style="text-align: center">
-						<h1>Artikelinfo</h1>
+						<form>
+
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text">Name</span>
+								</div>
+								<input class="form-control" id="name" name="name" type="text">
+							</div>
+
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text">Marke</span>
+								</div>
+								<input class="form-control" id="marke" name="marke" type="text">
+							</div>
+
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text">Hersteller</span>
+								</div>
+								<input class="form-control" id="hersteller" name="hersteller" type="text">
+							</div>
+
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text">Kategorie</span>
+								</div>
+								<input class="form-control" id="kategorie" name="kategorie" type="text">
+							</div>
+
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text">Stückzahl</span>
+								</div>
+								<input class="form-control" id="stueckzahl" name="stueckzahl" type="text">
+							</div>
+
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text">Beschreibung</span>
+								</div>
+								<input class="form-control" id="beschreibung" name="beschreibung" type="text">
+							</div>
+
+
+
+						</form>
+
 					</div>
 				</div>
 			</div>
 			<div id="Reihe2" class="row justify-content-around">
-				<div class="col-12" id="hinzufÃ¼gen">
-					<button>HinzufÃ¼gen</button>
+				<div class="col-12" id="hinzufügen">
+					<button onclick="artikelHinzufuegenVonAnzeige()">Hinzufügen</button>
 				</div>
 			</div>
 			<div id="Reihe3" class="row justify-content-around">
@@ -104,11 +152,40 @@
 	<footer class="row footer justify-content-around" id="footer">
 
 		<button type="button" class="btn btn-primary col-5 fas fa-long-arrow-alt-left" id="zurueckButton"
-			onclick="window.location.href = 'javascript:history.back()'" style="font-size:3vh;"> zurÃ¼ck</button>
+			onclick="window.location.href = 'javascript:history.back()'" style="font-size:3vh;"> zurück</button>
 		<button type="button" class="btn btn-primary col-5 fas fa-home" id="homeButton"
 			onclick="window.location.href = 'startseite.html'" style="font-size:3vh;"> Home</button>
 
 	</footer>
+
+	<script src="../js/data.js"></script>
+	<script src="../js/meinHaushalt-script.js"></script>
+	<script>
+		window.onload = function () {
+			let queryParameter = new URL(location.href).searchParams;
+			let artikelNeu = queryParameter.get('artikelNeu');
+			if (!artikelNeu) {
+				document.getElementById("name").value = artikelInfo[0].name;
+				document.getElementById("marke").value = artikelInfo[0].marke;
+				document.getElementById("hersteller").value = artikelInfo[0].hersteller;
+				document.getElementById("kategorie").value = artikelInfo[0].kategorie;
+				document.getElementById("stueckzahl").value = artikelInfo[0].stueckzahl;
+				document.getElementById("beschreibung").value = artikelInfo[0].beschreibung;
+			}
+		}
+		function artikelHinzufuegenVonAnzeige() {
+
+			artikel = {
+				name: document.getElementById("name").value,
+				marke: document.getElementById("marke").value,
+				hersteller: document.getElementById("hersteller").value,
+				kategorie: document.getElementById("kategorie").value,
+				stueckzahl: document.getElementById("stueckzahl").value,
+				beschreibung: document.getElementById("beschreibung").value,
+			}
+			artikelHinzufuegen(artikel);
+		}
+	</script>
 
 
 </body>

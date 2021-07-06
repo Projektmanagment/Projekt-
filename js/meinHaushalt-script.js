@@ -1,4 +1,5 @@
 
+
 let $tabelle = $('#tabelle');
 let $dropdown = $('#dropdownPlatzhalter');
 
@@ -44,3 +45,8 @@ function toggleFilter(kategorie){
 		};
 };
 };
+
+function artikelHinzufuegen(artikel) {
+	artikelInfo.push(artikel);
+}
+

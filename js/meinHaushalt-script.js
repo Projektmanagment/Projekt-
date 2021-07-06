@@ -1,1 +1,3 @@
-let a = 5;
+function artikelHinzufuegen(artikel) {
+	artikelInfo.push(artikel);
+}

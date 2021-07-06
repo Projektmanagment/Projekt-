@@ -6,13 +6,13 @@ var artikelInfo = [ {
 	marke : 'Gerolsteiner',
 	hersteller : 'Gerolsteiner Brunnen GmbH & Co. KG',
 	kategorie: 'Nahrungsmittel',
-	stückzahl : '6',
+	stueckzahl : '6',
 	beschreibung : 'Bitte nur dieses Wasser kaufen!',
 }, {
 	name : 'AspirinEffekt',
 	marke : 'Aspirin',
 	hersteller : 'Bayer',
 	kategorie: 'Medikament',
-	stückzahl : '20',
+	stueckzahl : '20',
 	beschreibung : 'Steht im Medikamentenschrank.',
 } ];

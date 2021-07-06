@@ -1,11 +1,5 @@
 
-
-let $tabelle = $('#tabelle');
-let $dropdown = $('#dropdownPlatzhalter');
-
-
-
-function createArticle(artikel) {
+function createArticle(artikel, tabelle) {
 
 	let $newArticle = $(
 	`<tr class="tabellenZeile" id="${artikel.name}">
@@ -19,12 +13,12 @@ function createArticle(artikel) {
 	</tr>`
 	);
 
-	$tabelle.append($newArticle);
+	tabelle.append($newArticle);
 };
 
-function createDropdown(kategorien){
+function createDropdown(kategorien, dropdown){
 	for(i=0;i<kategorien.length;i++){
-		$dropdown.append($(`<button class="dropdown-item" id="${kategorien[i]}" type="button" style="font-size:2vh;">${kategorien[i]}</button>`));
+		dropdown.append($(`<button class="dropdown-item" id="${kategorien[i]}" type="button" style="font-size:2vh;">${kategorien[i]}</button>`));
 		$(`#${kategorien[i]}`).click(myScope([kategorien[i]]));
 	}
 	$(`#keinFilter`).click(myScope("keinFilter"));

@@ -12,38 +12,38 @@
 	<style type="text/css">
 		#Reihe1 {
 			vertical-align: middle;
-			height: 55%;
+			height: 60%;
 		}
 
 		#Reihe2 {
-			height: 15%;
+			height: 10%;
 		}
 
 		#Reihe3 {
-			height: 15%;
+			height: 10%;
 		}
 
 		#Reihe4 {
-			height: 15%;
+			height: 10%;
 		}
 
-		#hinzufügen {
+		#hinzufï¿½gen {
 			/* 	padding-top: 5%; */
 			vertical-align: middle;
 			text-align: center;
-			font-size: 500%;
+			font-size: 200%;
 		}
 
 		#entfernen {
 			vertical-align: middle;
 			text-align: center;
-			font-size: 500%;
+			font-size: 200%;
 		}
 
 		#abbrechen {
 			vertical-align: middle;
 			text-align: center;
-			font-size: 500%;
+			font-size: 200%;
 		}
 
 		#artikelinfo {
@@ -112,7 +112,7 @@
 
 							<div class="input-group mb-3">
 								<div class="input-group-prepend">
-									<span class="input-group-text">Stückzahl</span>
+									<span class="input-group-text">Stï¿½ckzahl</span>
 								</div>
 								<input class="form-control" id="stueckzahl" name="stueckzahl" type="text">
 							</div>
@@ -132,8 +132,8 @@
 				</div>
 			</div>
 			<div id="Reihe2" class="row justify-content-around">
-				<div class="col-12" id="hinzufügen">
-					<button onclick="artikelHinzufuegenVonAnzeige()">Hinzufügen</button>
+				<div class="col-12" id="hinzufï¿½gen">
+					<button onclick="artikelHinzufuegenVonAnzeige()">Hinzufï¿½gen</button>
 				</div>
 			</div>
 			<div id="Reihe3" class="row justify-content-around">
@@ -152,7 +152,7 @@
 	<footer class="row footer justify-content-around" id="footer">
 
 		<button type="button" class="btn btn-primary col-5 fas fa-long-arrow-alt-left" id="zurueckButton"
-			onclick="window.location.href = 'javascript:history.back()'" style="font-size:3vh;"> zurück</button>
+			onclick="window.location.href = 'javascript:history.back()'" style="font-size:3vh;"> zurï¿½ck</button>
 		<button type="button" class="btn btn-primary col-5 fas fa-home" id="homeButton"
 			onclick="window.location.href = 'startseite.html'" style="font-size:3vh;"> Home</button>
 
@@ -182,6 +182,7 @@
 				kategorie: document.getElementById("kategorie").value,
 				stueckzahl: document.getElementById("stueckzahl").value,
 				beschreibung: document.getElementById("beschreibung").value,
+				ampel: "rot",
 			}
 			artikelHinzufuegen(artikel);
 		}

@@ -1,5 +1,5 @@
+
 "use strict"
-let a = 5;
 
 var artikelInfo = [ {
 	name : 'Sprudelwasser',
@@ -8,6 +8,7 @@ var artikelInfo = [ {
 	kategorie: 'Nahrungsmittel',
 	stueckzahl : '6',
 	beschreibung : 'Bitte nur dieses Wasser kaufen!',
+	ampel: 'gelb',
 }, {
 	name : 'AspirinEffekt',
 	marke : 'Aspirin',
@@ -15,4 +16,5 @@ var artikelInfo = [ {
 	kategorie: 'Medikament',
 	stueckzahl : '20',
 	beschreibung : 'Steht im Medikamentenschrank.',
+	ampel: 'gruen',
 } ];

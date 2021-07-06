@@ -44,22 +44,19 @@ body{
 }
 
 .ampel{
-	display:inline-block;
-	height: 1em;
-	width:1em;
-	border-radius:50%;
+	font-size: 2vh;
 }
 
 .rot{
-	background-color:red;
+	color:red;
 }
 
 .gelb{
-	background-color:yellow;
+	color:yellow;
 }
 
 .gruen{
-	background-color:green;
+	color:green;
 }
 
 .tabellenZeile{
@@ -106,4 +103,8 @@ background-color: rgb(39, 107, 233);
 .iconHolder{
 	height: 100%;
 	padding: 1vh;
+}
+
+.noshow{
+	display: none;
 }
